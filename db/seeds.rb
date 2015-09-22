@@ -9,7 +9,7 @@
   rand_num = Random.new
   Post.create ({
     title: Faker::Lorem.sentence,
-    body: Faker::Lorem.paragraphs(rand_num.rand(1..3))
+    body: Faker::Lorem.paragraphs(rand_num.rand(1..3)).join(" ")
     })
 end
 
