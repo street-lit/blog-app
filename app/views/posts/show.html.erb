@@ -1,0 +1,15 @@
+<h1>Title: <%= post.title %></h1>
+
+<h4><%= link_to("Posts", posts_path)%></h4>
+
+<div>
+  <p>Body:</p>
+  <p><%= post.body %></p>
+</div>
+
+<p>Comment:</p>
+<div>
+  <% comments.each do |comment| %>
+  <p><%= comment.message %></p>
+  <% end %>
+</div>

@@ -1,6 +1,8 @@
 <h1> Blog Posts!</h1>
 
+<h4><%= link_to("New Post", new_post_path) %></h4>
+<h4><%= link_to("New Comment", new_comment_path) %></h4>
+
 <% posts.each do |post| %>
-  <p>Title: <%= post.title%></p>
-  <p>Blog Post: <%= post.body %></p>
+  <p><%=post.id%>. Title: <a href="/posts/<%= post.id %>"><%= post.title%></a></p>
 <%end%>

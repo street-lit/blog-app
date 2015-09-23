@@ -1,0 +1,13 @@
+<h2>Make a comment</h2>
+
+<%= form_for(comment) do |f| %>
+  <p>
+    <%= f.label :message %>
+    <%= f.text_area :message %>
+  </p>
+  <p>
+    <%= f.label :post_id%>
+    <%= f.select :post_id, post_options%>
+  </p>
+  <%= f.submit %>
+  <% end %>
