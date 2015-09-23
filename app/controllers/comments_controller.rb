@@ -4,9 +4,9 @@ class CommentsController < ApplicationController
     render template: 'comments/index.html.erb', locals: { comments: Comment.all }
   end
 
-  # def show
-
-  # end
+  def show
+    render template: 'comments/show.html.erb', locals: { comment: Comment.find(params[:id])}
+  end
 
   def new
     post_options = Post.order(id: :asc).map { |p| [p.id] }
