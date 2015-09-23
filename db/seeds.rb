@@ -14,9 +14,9 @@
 end
 
 80.times do
-  doge_start = %w(wow! how such very)
-  doge_end = %w(wonder wild neutrals fun sunshine cereal space taste taco marvels sparkle tingle yolo! mystery ROFL OMG totes)
-  doge_exclaim = %w(? ! <3)
+  doge_start = %w(how such very many)
+  doge_end = %w(wonder neutrals title blog marvels sparkle tingle yolo! mystery ROFL OMG totes! post comment lorem ipsum)
+  doge_exclaim = ["???", "!", "! <3", " <3"]
   doge = 1.times.map { doge_start.sample + " " + doge_end.sample + doge_exclaim.sample }.join("").capitalize
   Comment.create ({
     message: doge,
